@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Example</title>
+  </head>
+  <body>
+    <div id="result"></div>
+    <script>
+      function isJsonString(ptr) {
+        try {
+          JSON.parse(ptr);
+        } catch (e) {
+          return false;
+        }
+        return true; 
+      }
+      console.log(isJsonString(null));
+      document.getElementById('result').innerHTML = JSON.stringify(isJsonString(null));
+    </script>
+  </body>
+</html>
